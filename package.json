@@ -1,0 +1,32 @@
+{
+  "name": "yipyap",
+  "private": true,
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc -b tsconfig.json --pretty false",
+    "ci": "pnpm lint && pnpm test",
+    "api": "tsx apps/api/src/main.ts",
+    "api:live": "tsx scripts/api-live.ts",
+    "demo": "tsx apps/demo/src/main.ts",
+    "demo:quickstart": "tsx scripts/demo-quickstart.ts",
+    "whatsapp:smoke": "tsx scripts/whatsapp-linked-smoke.ts"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.3.14",
+    "@types/node": "^24.6.0",
+    "@types/qrcode": "^1.5.5",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
+    "yaml": "^2.8.1"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "7.0.0-rc.9",
+    "pino": "^10.3.1",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
